@@ -1,0 +1,49 @@
+.Home {
+  background: url('../../images/stock_catering_1.jpeg') no-repeat center center / cover;
+  width: 100%;
+  height: 936px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  background: red;
+  margin-top: 200px;
+  width: 200px;
+  height: 200px;
+}
+
+.logoTextContainer {
+  margin-top: 20px;
+  font-size: 75px;
+}
+
+.logoText {
+  color: #fff;
+  font-family: 'Snell Roundhand', cursive;
+  font-weight: bold;
+  text-shadow: 3px 3px #ee9998;
+}
+
+.linkRow {
+  display: flex;
+  justify-content: space-evenly;
+  width: 75%;
+}
+
+.linkButton {
+  background: transparent;
+  border: none;
+  font-size: 50px;
+  font-family: cursive;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px #ee9998;
+  font-variant: small-caps;
+}
+
+.linkButton:hover {
+  text-decoration: underline;
+}
