@@ -21,10 +21,10 @@
 }
 
 .logoText {
-  color: #fff;
+  color: var(--heading-primary);
   font-family: 'Snell Roundhand', cursive;
   font-weight: bold;
-  text-shadow: 3px 3px #ee9998;
+  text-shadow: 3px 3px var(--heading-secondary);
 }
 
 .linkRow {
@@ -39,8 +39,8 @@
   font-size: 50px;
   font-family: cursive;
   font-weight: bold;
-  color: white;
-  text-shadow: 3px 3px #ee9998;
+  color: var(--heading-primary);
+  text-shadow: 3px 3px var(--heading-secondary);
   font-variant: small-caps;
 }
 

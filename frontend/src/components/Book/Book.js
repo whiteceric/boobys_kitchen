@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Book.css';
 
 const Book = () => (
-  <div className="Book">
+  <div id="book" className="Book">
     Book Component
   </div>
 );

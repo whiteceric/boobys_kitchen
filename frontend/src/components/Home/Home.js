@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link as ScrollTo} from "react-scroll";
 import PropTypes from 'prop-types';
-import styles from './Home.module.css';
+import './Home.css'
 
 const Home = () => (
-  <div className={styles.Home}>
-    <div className={styles.logo}></div>
-    <div className={styles.logoTextContainer}>
-      <h1 className={styles.logoText}>Booby's Kitchen</h1>
+  <div className="Home">
+    <div className="logo"></div>
+    <div className="logoTextContainer">
+      <h1 className="logoText">Booby's Kitchen</h1>
     </div>
-    <div className={styles.linkRow}>
-      <button className={styles.linkButton}>About</button>
-      <button className={styles.linkButton}>Book</button>
-      <button className={styles.linkButton}>Contact</button>
+    <div className="linkRow">
+      <ScrollTo to="about" spy={true} smooth={true} className="linkButton">About</ScrollTo>
+      <ScrollTo to="book" spy={true} smooth={true} className="linkButton">Book</ScrollTo>
+      <ScrollTo to="contact" spy={true} smooth={true} className="linkButton">Contact</ScrollTo>
     </div>
   </div>
 );
