@@ -6,21 +6,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.homeContents {
+  height: 100%;
+  width: auto;
+  max-width: 2152px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .logo {
-  background: red;
-  margin-top: 200px;
-  width: 200px;
-  height: 200px;
-}
+  margin-top: 10%;
+  width: 30%;
+  height: auto;
 
-.logoTextContainer {
-  margin-top: 20px;
-  font-size: 75px;
+  filter: drop-shadow(10px 10px 2px var(--nice-red));
 }
 
 .logoText {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-size: 150px;
   color: var(--heading-primary);
   font-family: 'Snell Roundhand', cursive;
   font-weight: bold;
@@ -42,6 +53,27 @@
   color: var(--heading-primary);
   text-shadow: 3px 3px var(--heading-secondary);
   font-variant: small-caps;
+}
+
+@media (max-width:1060px) {
+  .logoText {
+    font-size: 60px;
+  }
+
+  .logo {
+    margin-top: 0%;
+    width: 80%;
+    max-width: 630px;
+  }
+
+  .linkRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .linkButton {
+    font-size: 30px;
+  }
 }
 
 .linkButton:hover {
