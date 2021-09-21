@@ -57,6 +57,8 @@
 
 .linkButton:hover {
   cursor: pointer;
+  color: var(--heading-secondary);
+  text-shadow: 3px 3px var(--heading-primary);
 }
 
 @media (max-width:1060px) {
