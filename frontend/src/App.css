@@ -1,9 +1,10 @@
 :root {
   --nice-red: #ee9998;
+  --nice-red-dark: #AD8382;
   --heading-primary: white;
   --heading-secondary: var(--nice-red);
   --text-box-primary: var(--nice-red);
-  --text-box-secondary: #AD8382;
+  --text-box-secondary: var(--nice-red-dark); 
 
   --mobile-width: 1060px;
 }
