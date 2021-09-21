@@ -55,6 +55,10 @@
   font-variant: small-caps;
 }
 
+.linkButton:hover {
+  cursor: pointer;
+}
+
 @media (max-width:1060px) {
   .logoText {
     font-size: 60px;

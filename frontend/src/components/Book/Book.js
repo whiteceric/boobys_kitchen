@@ -1,10 +1,13 @@
 import React from 'react';
+import BookForm from '../BookForm/BookForm';
+import MediaFeed from '../MediaFeed/MediaFeed';
 import PropTypes from 'prop-types';
 import './Book.css';
 
 const Book = () => (
   <div id="book" className="Book">
-    Book Component
+    <BookForm />
+    <MediaFeed />
   </div>
 );
 
