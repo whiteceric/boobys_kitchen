@@ -7,4 +7,6 @@
   --text-box-secondary: var(--nice-red-dark); 
 
   --mobile-width: 1060px;
+
+  --label-font: "Apple Chancery", fantasy;
 }

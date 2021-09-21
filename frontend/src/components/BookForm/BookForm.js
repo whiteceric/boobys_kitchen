@@ -8,8 +8,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const BookForm = () => {
   const [date, setDate] = useState(new Date())
-  const [startTime, setStartTime] = useState(new Date())
-  const [endTime, setEndTime] = useState(new Date())
+  const [startTime, setStartTime] = useState(new Date(0,0,0,17,0))
+  const [endTime, setEndTime] = useState(new Date(0,0,0,19,0))
+
+  const onFormSubmit = () => {
+    console.log('submit');
+  }
 
   return (
     <div className="BookForm">
@@ -22,14 +26,14 @@ const BookForm = () => {
         <h2 className="bookFormTitle">Event:</h2>
         <input type="text" placeholder="Event Name" />
         <div className="dateRow">
-          <div className="timeCol">
+          <div className="dateCol">
             <h2 className="bookFormTitle">Date:</h2>
             <DatePicker
               selected={date}
               onChange={(date) => setDate(date)}
             />
           </div>
-          <div className="timeCol">
+          <div className="dateCol">
             <h2 className="bookFormTitle">Start Time:</h2>
             <DatePicker
               selected={startTime}
@@ -37,8 +41,9 @@ const BookForm = () => {
               showTimeSelect
               showTimeSelectOnly
               timeIntervals={60}
-              timeCaption="Time"
+              timeCaption="Start Time"
               dateFormat="h:mm aa"
+              popperPlacement="bottom"
             />
             <h2 className="bookFormTitle">End Time:</h2>
             <DatePicker
@@ -47,13 +52,15 @@ const BookForm = () => {
               showTimeSelect
               showTimeSelectOnly
               timeIntervals={60}
-              timeCaption="Time"
+              timeCaption="End Time"
               dateFormat="h:mm aa"
+              popperPlacement="bottom"
             />
           </div>
         </div>
         <h2 className="bookFormTitle">Other Info:</h2>
         <textarea />
+        <button type="submit" onClick={(e) => {e.preventDefault(); onFormSubmit()}}>Submit</button>
       </form>
     </div>
   )

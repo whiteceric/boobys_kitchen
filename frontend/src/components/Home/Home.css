@@ -48,7 +48,7 @@
   background: transparent;
   border: none;
   font-size: 50px;
-  font-family: cursive;
+  font-family: var(--label-font);
   font-weight: bold;
   color: var(--heading-primary);
   text-shadow: 3px 3px var(--heading-secondary);
@@ -63,7 +63,7 @@
 
 @media (max-width:1060px) {
   .logoText {
-    font-size: 60px;
+    font-size: 10vw;
   }
 
   .logo {

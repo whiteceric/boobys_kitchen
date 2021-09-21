@@ -10,7 +10,7 @@
 
 .bookFormTitle {
   font-size: 50px;
-  font-family: cursive;
+  font-family: var(--label-font);
   font-weight: bold;
   color: var(--heading-primary);
   text-shadow: 3px 3px var(--nice-red-dark);
@@ -21,6 +21,7 @@ h1.bookFormTitle {
   margin-top: 5%;
   margin-bottom: 5%;
   text-decoration: underline;
+  text-align: center;
 }
 
 h2.bookFormTitle {
@@ -69,6 +70,18 @@ h2.bookFormTitle {
   margin-bottom: 5%;
 }
 
+.formContainer button[type="submit"] {
+  background-color: white;
+  border: 5px solid var(--nice-red-dark);
+  margin-bottom: 50px;
+  color: var(--nice-red-dark);
+
+  border-radius: 5px;
+  width: 50%;
+  font-size: 40px;
+  font-family: var(--label-font);
+}
+
 .react-datepicker-wrapper input {
   width: 80%;
   text-align: right;
@@ -88,7 +101,45 @@ h2.bookFormTitle {
     width: 90%;
   }
 
-  .timeCol {
+  h1.bookFormTitle {
+    margin-top: 10%;
+    font-size: 10vw;
+    line-height: 150%;
+  }
+
+  h2.bookFormTitle {
+    margin-top: 4%;
+    font-size: 5vw;
+  }
+
+  .dateRow {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .dateCol {
     margin-left: 5%;
+  }
+
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+
+  .react-datepicker-wrapper input {
+    width: 100%;
+    text-align: center;
+  }
+
+  .formContainer button[type="submit"] {
+    width: 50vw;
+    font-size: 6vw;
+    display: block;
+    text-align: center;
+    line-height: 1em;
+    padding: 20px;
   }
 }
