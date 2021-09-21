@@ -12,14 +12,16 @@ const BookForm = () => {
   return (
     <div className="BookForm">
       <h1 className="bookFormTitle">Request to Book!</h1>
-      <DatePicker
-        className="bookFormTextBox"
-        selected={date}
-        onChange={(date) => setDate(date)}
-      />
-      <form onSubmit={() => { console.log('Submit') }}>
-        <input className="bookFormTextBox" type="text" />
-      </form>
+      <div className="formContainer">
+        <DatePicker
+          className="bookFormDatePicker"
+          selected={date}
+          onChange={(date) => setDate(date)}
+        />
+        <form onSubmit={() => { console.log('Submit') }}>
+          <input className="bookFormTextBox" type="text" />
+        </form>
+      </div>
     </div>
   )
 }
