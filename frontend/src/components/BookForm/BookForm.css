@@ -1,21 +1,31 @@
 .BookForm {
   width: 40%;
-  height: 800px;
   background-color: var(--nice-red);
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 10px 10px 0px var(--text-box-secondary);
 }
 
 .bookFormTitle {
-  margin-top: 5%;
   font-size: 50px;
   font-family: cursive;
   font-weight: bold;
   color: var(--heading-primary);
-  text-shadow: 3px 3px var(--heading-secondary);
+  text-shadow: 3px 3px var(--nice-red-dark);
   font-variant: small-caps;
+}
+
+h1.bookFormTitle {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-decoration: underline;
+}
+
+h2.bookFormTitle {
+  margin: 0;
+  font-size: 30px;
 }
 
 .formContainer {
@@ -24,35 +34,61 @@
   align-items: center;
 
   width: 80%;
+
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  /* border: 1px solid black */
+}
+
+.formContainer input:focus {
+  outline: none;
+  border: 3px solid var(--text-box-secondary);
+}
+
+.dateRow {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .react-datepicker-wrapper {
   margin-top: 5%;
   margin-bottom: 5%;
   
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-self: center;
-  font-size: 25px;
+  font-size: 20px;
+}
 
-  text-align: center;
+.formContainer input {
+  width: 100%;
+
+  margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 .react-datepicker-wrapper input {
-  justify-self: center;
+  width: 80%;
   text-align: right;
-
-  width: 100%;
 }
 
-.bookFormTextBox {
+.formContainer textarea {
   width: 100%;
+  height: 300px;
 
-  margin-top: 5%;
+  resize: none;
+  margin-top: 2%;
   margin-bottom: 5%;
+}
 
-  font-size: 25px;
-  font-family: cursive, Arial, Helvetica, sans-serif;
+@media (max-width: 1060px) {
+  .BookForm {
+    width: 90%;
+  }
 
+  .timeCol {
+    margin-left: 5%;
+  }
 }

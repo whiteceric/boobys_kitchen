@@ -8,18 +8,52 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const BookForm = () => {
   const [date, setDate] = useState(new Date())
+  const [startTime, setStartTime] = useState(new Date())
+  const [endTime, setEndTime] = useState(new Date())
 
   return (
     <div className="BookForm">
       <h1 className="bookFormTitle">Request to Book!</h1>
       <form className="formContainer">
-        <input className="bookFormTextBox" type="text" placeholder="Your Name" />
-        <input className="bookFormTextBox" type="email" placeholder="Email Address" />
-        <input className="bookFormTextBox" type="text" placeholder="Event Name" />
-        <DatePicker
-          selected={date}
-          onChange={(date) => setDate(date)}
-        />
+        <h2 className="bookFormTitle">Name:</h2>
+        <input type="text" placeholder="Your Name" />
+        <h2 className="bookFormTitle">Email:</h2>
+        <input type="email" placeholder="Email Address" />
+        <h2 className="bookFormTitle">Event:</h2>
+        <input type="text" placeholder="Event Name" />
+        <div className="dateRow">
+          <div className="timeCol">
+            <h2 className="bookFormTitle">Date:</h2>
+            <DatePicker
+              selected={date}
+              onChange={(date) => setDate(date)}
+            />
+          </div>
+          <div className="timeCol">
+            <h2 className="bookFormTitle">Start Time:</h2>
+            <DatePicker
+              selected={startTime}
+              onChange={(startTime) => setStartTime(startTime)}
+              showTimeSelect
+              showTimeSelectOnly
+              timeIntervals={60}
+              timeCaption="Time"
+              dateFormat="h:mm aa"
+            />
+            <h2 className="bookFormTitle">End Time:</h2>
+            <DatePicker
+              selected={endTime}
+              onChange={(endTime) => setEndTime(endTime)}
+              showTimeSelect
+              showTimeSelectOnly
+              timeIntervals={60}
+              timeCaption="Time"
+              dateFormat="h:mm aa"
+            />
+          </div>
+        </div>
+        <h2 className="bookFormTitle">Other Info:</h2>
+        <textarea />
       </form>
     </div>
   )
