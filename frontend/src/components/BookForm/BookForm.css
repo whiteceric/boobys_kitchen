@@ -18,10 +18,11 @@
   align-items: center;
 
   width: 80%;
-  background-color: red;
 }
 
-.bookFormDatePicker {
+.react-datepicker-wrapper {
+  background-color: red;
+
   width: 50%;
 
   display: flex;
@@ -30,6 +31,11 @@
   justify-self: center;
   font-size: 25px;
 
+  text-align: center;
+}
+
+.react-datepicker-wrapper input {
+  justify-self: center;
   text-align: right;
 }
 

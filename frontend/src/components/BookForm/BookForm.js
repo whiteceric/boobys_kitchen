@@ -14,7 +14,6 @@ const BookForm = () => {
       <h1 className="bookFormTitle">Request to Book!</h1>
       <div className="formContainer">
         <DatePicker
-          className="bookFormDatePicker"
           selected={date}
           onChange={(date) => setDate(date)}
         />
