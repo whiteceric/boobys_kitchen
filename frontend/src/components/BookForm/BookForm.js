@@ -7,12 +7,21 @@ import "react-datepicker/dist/react-datepicker.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const BookForm = () => {
-  const [date, setDate] = useState(new Date())
-  const [startTime, setStartTime] = useState(new Date(0,0,0,17,0))
-  const [endTime, setEndTime] = useState(new Date(0,0,0,19,0))
+  const [date, setDate] = useState(new Date());
+  const [startTime, setStartTime] = useState(new Date(0, 0, 0, 17, 0));
+  const [endTime, setEndTime] = useState(new Date(0, 0, 0, 19, 0));
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    event: '',
+    date: date,
+    startTime: startTime,
+    endTime: endTime,
+    otherInfo: '',
+  });
 
   const onFormSubmit = () => {
-    console.log('submit');
+    console.log(formState);
   }
 
   return (
@@ -20,11 +29,11 @@ const BookForm = () => {
       <h1 className="bookFormTitle">Request to Book!</h1>
       <form className="formContainer">
         <h2 className="bookFormTitle">Name:</h2>
-        <input type="text" placeholder="Your Name" />
+        <input type="text" placeholder="Your Name" onChange={(e) => { setFormState({ ...formState, name: e.target.value }) }} />
         <h2 className="bookFormTitle">Email:</h2>
-        <input type="email" placeholder="Email Address" />
+        <input type="email" placeholder="Email Address" onChange={(e) => { setFormState({ ...formState, email: e.target.value }) }}/>
         <h2 className="bookFormTitle">Event:</h2>
-        <input type="text" placeholder="Event Name" />
+        <input type="text" placeholder="Event Name" onChange={(e) => { setFormState({ ...formState, event: e.target.value }) }}/>
         <div className="dateRow">
           <div className="dateCol">
             <h2 className="bookFormTitle">Date:</h2>
@@ -59,8 +68,8 @@ const BookForm = () => {
           </div>
         </div>
         <h2 className="bookFormTitle">Other Info:</h2>
-        <textarea />
-        <button type="submit" onClick={(e) => {e.preventDefault(); onFormSubmit()}}>Submit</button>
+        <textarea onChange={(e) => { setFormState({ ...formState, otherInfo: e.target.value }) }}/>
+        <button type="submit" onClick={(e) => { e.preventDefault(); onFormSubmit() }}>Submit</button>
       </form>
     </div>
   )
