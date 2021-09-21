@@ -4,4 +4,6 @@
   --heading-secondary: var(--nice-red);
   --text-box-primary: var(--nice-red);
   --text-box-secondary: #AD8382;
+
+  --mobile-width: 1060px;
 }
