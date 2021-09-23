@@ -24,9 +24,9 @@ const Home = () => {
           </>
         )}
         <div className="linkRow">
-          <ScrollTo to="about" spy={true} smooth={true} className="linkButton">About</ScrollTo>
-          <ScrollTo to="book" spy={true} smooth={true} className="linkButton">Book</ScrollTo>
-          <ScrollTo to="contact" spy={true} smooth={true} className="linkButton">Contact</ScrollTo>
+          <ScrollTo to="about" spy={true} className="linkButton">About</ScrollTo>
+          <ScrollTo to="book" spy={true} className="linkButton">Book</ScrollTo>
+          {/* <ScrollTo to="contact" spy={true} smooth={true} className="linkButton">Contact</ScrollTo> */}
         </div>
       </div>
     </div>
