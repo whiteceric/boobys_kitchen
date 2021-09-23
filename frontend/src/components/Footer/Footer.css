@@ -1,4 +1,6 @@
 .Footer {
+  background-color: var(--nice-red);
+  border-top: solid 2px var(--nice-red-dark);
   padding-top: 50px;
   height: 150px;
   margin-top: 100px;
@@ -8,17 +10,18 @@
   margin: auto;
   padding: 20px;
   position: center;
-  border-top: solid 2px var(--nice-red-dark);
 
-  display: grid;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  grid-template-columns: auto auto auto;
-  grid-gap: 30px;
+  text-align: center;
 }
 
 .footer-link-text {
   cursor: pointer;
-  color: var(--nice-red-dark);
+  color: white;
+
+  font-size: 25px;
 }
 
 .footer-link-text:hover {
