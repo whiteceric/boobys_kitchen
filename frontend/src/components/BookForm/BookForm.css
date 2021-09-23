@@ -1,6 +1,7 @@
 .BookForm {
   width: 40%;
   background-color: var(--nice-red);
+  margin-left: 10%;
 
   display: flex;
   flex-direction: column;
