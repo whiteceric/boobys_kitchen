@@ -39,26 +39,32 @@
 }
 
 .linkRow {
+  width: 100vw;
+  background-color: white;
+  margin-top: 5%;
+  margin-bottom: 10%;
   display: flex;
   justify-content: space-evenly;
-  width: 75%;
+  border-top: solid 10px var(--text-box-primary);
+  border-bottom: solid 10px var(--text-box-primary);
 }
 
 .linkButton {
   background: transparent;
+  padding-bottom: 10px;
   border: none;
   font-size: 50px;
   font-family: var(--label-font);
   font-weight: bold;
-  color: var(--heading-primary);
-  text-shadow: 3px 3px var(--heading-secondary);
+  color: var(--heading-secondary);
+  text-shadow: 3px 3px var(--text-box-secondary);
   font-variant: small-caps;
 }
 
 .linkButton:hover {
   cursor: pointer;
-  color: var(--heading-secondary);
-  text-shadow: 3px 3px var(--heading-primary);
+  color: var(--heading-primary);
+  text-shadow: 3px 3px var(--heading-secondary);
 }
 
 @media (max-width:1060px) {
