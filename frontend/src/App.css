@@ -10,4 +10,7 @@
 
   --label-font: "Apple Chancery", "Savoye Let", cursive;
   --normal-font: "Arial Black", "Lucida Sans Unicode", sans-serif;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }

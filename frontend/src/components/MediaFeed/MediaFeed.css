@@ -18,6 +18,9 @@
     overflow: hidden;
     max-width: 30vw;
     box-shadow: 10px 10px 0px var(--text-box-secondary);
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .feedContainer {
@@ -32,18 +35,13 @@
 
 .feedContainer img {
     object-fit: cover;
-    /* width: 30vw;
-    height: 30vw;
-    position: absolute;  */
-    /* left: 0;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out; */
     display: inline-block;
 
     height: 30vw;
     width: 30vw;
+}
+
+.mediaImage {
 }
 /* 
 .feedContainer img.feedBottom {

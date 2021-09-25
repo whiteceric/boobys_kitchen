@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Carousel from 'react-responsive-carousel';
 import PropTypes from 'prop-types';
 import './MediaFeed.css';
 
@@ -47,9 +48,7 @@ const MediaFeed = () => {
         <div className="slideShowContainer">
           <div
             className="feedContainer"
-            style={{ transform: `translate3d(${-imgIndex * 100}%, 0, 0)` }}>
-            {/* <img className="feedBottom" src={images[imgIndex+1]} alt='' />
-      <img className="feedTop" src={images[imgIndex]} alt='' /> */}
+            style={{ transform: `translate3d(${-imgIndex * 100}%, 0, 0)`}}>
             {images.map((img, index) => {
               return (
                 <img className="mediaImage" src={img} alt='' key={index} />
