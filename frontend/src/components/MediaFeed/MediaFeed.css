@@ -15,12 +15,8 @@
 
 .slideShowContainer {
     margin: 0 auto;
-    overflow: hidden;
     max-width: 30vw;
     box-shadow: 10px 10px 0px var(--text-box-secondary);
-
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 .feedContainer {

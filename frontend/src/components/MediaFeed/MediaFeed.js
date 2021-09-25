@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Carousel from 'react-responsive-carousel';
+import { Carousel } from 'react-responsive-carousel';
 import PropTypes from 'prop-types';
 import './MediaFeed.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const delay = 2500;
 
@@ -46,15 +47,22 @@ const MediaFeed = () => {
       <a href="https://www.facebook.com/Boobys-Kitchen-229259131754242" target="_blank" rel="noopener noreferrer">
         <h1 className="mediaTitle">Check Us Out!</h1>
         <div className="slideShowContainer">
-          <div
+          <Carousel
             className="feedContainer"
-            style={{ transform: `translate3d(${-imgIndex * 100}%, 0, 0)`}}>
+            showArrows={false}
+            showStatus={false}
+            showIndicators={false}
+            showThumbs={false}
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+          >
             {images.map((img, index) => {
               return (
                 <img className="mediaImage" src={img} alt='' key={index} />
               )
             })}
-          </div>
+          </Carousel>
         </div>
       </a>
     </div>
