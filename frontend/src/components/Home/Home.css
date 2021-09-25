@@ -85,6 +85,8 @@
 
   .linkButton {
     font-size: 30px;
+    text-shadow: none;
+    font-weight: bold;
   }
 }
 
