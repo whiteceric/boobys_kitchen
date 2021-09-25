@@ -19,7 +19,6 @@ for (let [k, v] of Object.entries(imagesObj)) {
 const MediaFeed = () => {
   const [imgIndex, setImgIndex] = useState(0)
   const timeoutRef = useRef(null);
-  console.log(images)
 
   function resetTimeout() {
     if (timeoutRef.current) {

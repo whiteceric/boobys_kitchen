@@ -79,7 +79,7 @@ h2.bookFormTitle {
   border-radius: 5px;
   width: 50%;
   font-size: 40px;
-  font-family: var(--label-font);
+  font-family: var(--normal-font);
 }
 
 .react-datepicker-wrapper input {

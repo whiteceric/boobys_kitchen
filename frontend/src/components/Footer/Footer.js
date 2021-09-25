@@ -1,18 +1,13 @@
 import React from "react";
+import {Link as ScrollTo} from "react-scroll";
 import "./Footer.css";
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
   return (
     <div className="Footer">
       <div className="footer-link-container">
-        <div onClick={scrollToTop}>
-          <small className="footer-link-text">Back to Top</small>
+        <div>
+          <ScrollTo to="home" spy={true} smooth={true} duration={500} className="footer-link-text">Back to Top</ScrollTo>
         </div>
       </div>
     </div>

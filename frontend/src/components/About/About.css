@@ -41,7 +41,7 @@
 
   line-height: 150%;
   color: var(--text-box-secondary);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--normal-font);
 }
 
 .about-body {

@@ -7,10 +7,12 @@ import './Home.css'
 
 const Home = () => {
   const { height, width } = useWindowDimensions();
-  console.log(width)
+  const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+  console.log(isChrome);
 
   return (
-    <div className="Home">
+    <div id="home" className="Home">
       <div className="homeContents">
         {(width > 1060) ? (
           <>
@@ -24,8 +26,8 @@ const Home = () => {
           </>
         )}
         <div className="linkRow">
-          <ScrollTo to="about" spy={true} smooth={true} className="linkButton">About</ScrollTo>
-          <ScrollTo to="book" spy={true} smooth={true} className="linkButton">Book</ScrollTo>
+          <ScrollTo to="about" spy={true} smooth={true} duration={500} className="linkButton">About</ScrollTo>
+          <ScrollTo to="book" spy={true} smooth={true} duration={500} className="linkButton">Book</ScrollTo>
           {/* <ScrollTo to="contact" spy={true} smooth={true} className="linkButton">Contact</ScrollTo> */}
         </div>
       </div>

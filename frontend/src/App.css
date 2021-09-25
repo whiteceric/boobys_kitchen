@@ -8,5 +8,6 @@
 
   --mobile-width: 1060px;
 
-  --label-font: "Apple Chancery", fantasy;
+  --label-font: "Apple Chancery", "Savoye Let", cursive;
+  --normal-font: "Arial Black", "Lucida Sans Unicode", sans-serif;
 }
