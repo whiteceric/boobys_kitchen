@@ -7,9 +7,6 @@ import './Home.css'
 
 const Home = () => {
   const { height, width } = useWindowDimensions();
-  const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-
-  console.log(isChrome);
 
   return (
     <div id="home" className="Home">
