@@ -3,3 +3,6 @@
 
 .env
 env/
+
+# postgres database folder
+data/
